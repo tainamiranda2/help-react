@@ -5,11 +5,18 @@ import { Sing } from './pages/login/sing';
 import { Singup } from './pages/login/sing-up';
 import { Home } from './pages/home/Home';
 
+const Private=({Item})=>{
+    const signed=true;
+    return signed > 0 ? <Item/> : <Sing/>
+}
+
 export const Router=()=>{
+
+   
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Private Item={Home} />} />
                 <Route path="/Login" element={<Sing/>}/>
                 <Route path="/Sair" element={<Singup/>}/>
             </Routes>

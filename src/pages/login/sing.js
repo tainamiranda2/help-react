@@ -8,9 +8,7 @@ const handleChange=(event)=>{
 
 }
 
-const handleSubmit(){
 
-}
     return(
         <>
         <h2>Entrar</h2>
@@ -29,7 +27,7 @@ const handleSubmit(){
 
             <Button
              text="entrar"
-             onClick={handleSubmit}
+             //onClick={handleSubmit}
              />
         </form>
         </>
