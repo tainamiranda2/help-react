@@ -1,9 +1,9 @@
 import React from 'react';
-
+import *  as C from './style'
  export const Button=({type,text,onClick})=>{
     return(
-        <button type={type} onClick={onClick}>
+        <C.button type={type} onClick={onClick}>
            {text} 
-        </button>
+        </C.button>
     )
 }

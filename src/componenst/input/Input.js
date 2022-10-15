@@ -1,8 +1,8 @@
 import React from 'react';
-
+import *  as C from './style'
  export const Input=({name,placeholder,type,handleChange})=>{
     return(
-        <input 
+        <C.input 
         name={name}
         placeholder={placeholder}
         type={type}
