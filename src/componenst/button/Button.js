@@ -1,9 +1,15 @@
 import React from 'react';
-import *  as C from './style'
- export const Button=({type,text,onClick})=>{
+import {ButtonStyle} from './style'
+
+ export const Button=({
+    text,
+    onClick})=>{
     return(
-        <C.button type={type} onClick={onClick}>
-           {text} 
-        </C.button>
+        <div>
+        <ButtonStyle
+        onClick={onClick}  
+        >{text}</ButtonStyle>
+      
+      </div>
     )
 }

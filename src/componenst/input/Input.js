@@ -1,12 +1,16 @@
 import React from 'react';
-import *  as C from './style'
- export const Input=({name,placeholder,type,handleChange})=>{
+import {InputSteye} from './style'
+
+ export const Input=({name,
+    placeholder,
+    type,
+    onChange})=>{
     return(
-        <C.input 
+        <InputSteye
         name={name}
         placeholder={placeholder}
         type={type}
-        onChange={handleChange}
+        onChange={onChange}
         />
     )
 }

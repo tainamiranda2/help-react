@@ -1,35 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from '../../componenst/input/Input';
 import { Button } from '../../componenst/button/Button';
-
+import { Link } from 'react-router-dom';
+//import useAuth from '../../hooks/useAuth';
 export const Sing=()=>{
 
-const handleChange=(event)=>{
+const [email, setEmail]=useState("")
+const [senha, setSenha]=useState("")
+const [error, setError]=useState("")
 
-}
 
+//console.log(handleSubmit)
 
     return(
         <>
-        <h2>Entrar</h2>
+        <h2>Sistema de login</h2>
         {/*estilizar */}
-        <form>
-            <Input
+       
+         <Input
             type='email'
             placeholder="informe seu email"
-            onChange={handleChange}
+           onChange={(e)=>[setEmail(e.target.value),setError("")]}
+           value={email}
             />
              <Input
             type='password'
             placeholder="informe sua senha"
-            onChange={handleChange}
-            />
+            onChange={(e)=>[setSenha(e.target.value),setError("")]}
 
-            <Button
+           value={senha}
+            />
+            
+<label>{error}</label>
+           <Button
              text="entrar"
-             //onClick={handleSubmit}
+            // onClick={handleSubmit}
              />
-        </form>
+              <label>Não tem conta</label>
+      <strong>
+  <Link  to="/">Registrar-se</Link>    
+
+        </strong>
         </>
     )
 }
