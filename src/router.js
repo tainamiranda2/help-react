@@ -21,7 +21,7 @@ export const Router=()=>{
             <Routes>
                 <Route path="/" element={<Private Item={Home} />} />
                 <Route path="/Login" element={<Sing/>}/>
-                <Route path="/Sair" element={<Singup/>}/>
+                <Route path="/Registrar" element={<Singup/>}/>
             </Routes>
         </BrowserRouter>
     )

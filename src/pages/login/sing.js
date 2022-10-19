@@ -3,6 +3,7 @@ import { Input } from '../../componenst/input/Input';
 import { Button } from '../../componenst/button/Button';
 import { Link } from 'react-router-dom';
 //import useAuth from '../../hooks/useAuth';
+import { Container,Content,Label,LabelSingup,LabelError,Strong } from './style';
 export const Sing=()=>{
 
 const [email, setEmail]=useState("")
@@ -13,9 +14,9 @@ const [error, setError]=useState("")
 //console.log(handleSubmit)
 
     return(
-        <>
-        <h2>Sistema de login</h2>
-        {/*estilizar */}
+        <Container>
+        <Label>Sistema de login</Label>
+    <Content>
        
          <Input
             type='email'
@@ -31,16 +32,18 @@ const [error, setError]=useState("")
            value={senha}
             />
             
-<label>{error}</label>
+<LabelError>{error}</LabelError>
            <Button
              text="entrar"
             // onClick={handleSubmit}
              />
-              <label>Não tem conta</label>
-      <strong>
-  <Link  to="/">Registrar-se</Link>    
+              <LabelSingup>Não tem conta</LabelSingup>
+      <Strong>
+  <Link  to="/Registrar">Registrar-se</Link>    
 
-        </strong>
-        </>
+        </Strong>
+        </Content>
+        
+        </Container>
     )
 }
